@@ -4,7 +4,8 @@
   "description": "Select UI Frameworks.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "server": "nodemon server.js"
   },
   "keywords": [
     "full",
@@ -15,7 +16,9 @@
   "author": "Terry Shenker",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.16"
   },
   "devDependencies": {
     "nodemon": "^1.18.8"
