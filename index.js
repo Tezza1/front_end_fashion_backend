@@ -1,11 +1,16 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
 // Load routes
 const components = require('./routes/components');
 const frameworks = require('./routes/frameworks');
 
 const app = express();
+
+// Body parser middleware 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // Connect to database --> because running old 32 bit version
 mongoose.Promise = global.Promise;
